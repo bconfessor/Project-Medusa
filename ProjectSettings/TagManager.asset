@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BorderWall
   - SpawnObelisk
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - EnemyLayer
   - 
   - 
   - 
