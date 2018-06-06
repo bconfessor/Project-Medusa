@@ -14,7 +14,7 @@ public class ButtonFunctions : MonoBehaviour {
     public float gazeTime = 2.0f;
     float timer;
 
-    bool startGazed, creditsGazed, backGazed, quitGazed, OKGazed = false;
+    bool startGazed, creditsGazed, backGazed, quitGazed, OKGazed, restartGazed, returnGazed = false;
 
 
     
@@ -121,9 +121,56 @@ public class ButtonFunctions : MonoBehaviour {
     }
 
 
+    //Main Scene Restart button
+    public void RestartButtonEnter()
+    {
+        Debug.Log("Gaze at Restart Button");
+        restartGazed = true;
+    }
+    public void RestartButtonExit()
+    {
+        Debug.Log("Gaze off Restart Button");
+        restartGazed = false;
+        timer = 0;
+    }
 
-	// Use this for initialization
-	void Awake () {
+    public void RestartButtonClicked()
+    {
+        Debug.Log("Going to restart now...");
+        SceneManager.LoadScene("MainScene");
+        timer = 0;
+    }
+
+
+
+    //Main Scene Return to Main Menu button
+    public void ReturnButtonEnter()
+    {
+        Debug.Log("Gaze at Return Button");
+        returnGazed = true;
+    }
+    public void ReturnButtonExit()
+    {
+        Debug.Log("Gaze off Restart Button");
+        returnGazed = false;
+        timer = 0;
+    }
+
+    public void ReturnButtonClicked()
+    {
+        Debug.Log("Returning to Main Menu...");
+        SceneManager.LoadScene("MainMenu");
+        timer = 0;
+    }
+
+
+
+
+
+    //============================================================================================================================================================================
+
+    // Use this for initialization
+    void Awake () {
         if (instance != null)
             Destroy(this.gameObject);
         else
@@ -133,7 +180,7 @@ public class ButtonFunctions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(startGazed||creditsGazed||backGazed||quitGazed||OKGazed)
+		if(startGazed||creditsGazed||backGazed||quitGazed||OKGazed||restartGazed||returnGazed)
         {
             timer += Time.deltaTime;
             if(timer >=gazeTime)
@@ -152,10 +199,25 @@ public class ButtonFunctions : MonoBehaviour {
                     CreditsBackButtonClicked();
                 }
                 else if (quitGazed)
+                {
                     QuitButtonClicked();
+                }
 
-                else//OK button from StoryIntro scene
+                else if (OKGazed)//OK button from StoryIntro scene
+                {
                     OKButtonClicked();
+                }
+
+                else if (restartGazed)//Main Scene Restart Button
+                {
+                    RestartButtonClicked();
+                }
+
+                else if (returnGazed)
+                {
+                    ReturnButtonClicked();
+                }
+
             }
         }
 	}

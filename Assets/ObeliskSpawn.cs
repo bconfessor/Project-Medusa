@@ -37,6 +37,7 @@ public class ObeliskSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (PlayerStats.instance.isDead)
+            isSpawning = false;
 	}
 }

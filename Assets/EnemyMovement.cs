@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(!isPetrified)
+        if(!isPetrified && !PlayerStats.instance.isDead)
            MoveTowardsPlayer();
     }
 }
