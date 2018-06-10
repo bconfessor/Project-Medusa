@@ -12,6 +12,7 @@ public class EnemyPetrificationCheck : MonoBehaviour {
 
     public float timeToCrumbleIntoDust = 3f;
 
+    bool enemyIsDead = false;
 
     public void OnGazeEnter()
     {
@@ -34,8 +35,11 @@ public class EnemyPetrificationCheck : MonoBehaviour {
 
 
         //enemy was defeated, update Fallen Enemies Counter
-        UIValuesTracker.instance.AddFallenEnemy();
-
+        if (!enemyIsDead)
+        {
+            UIValuesTracker.instance.AddFallenEnemy();
+            enemyIsDead = true;//to ensure it will only count once
+        }
         StartCoroutine(CrumbleIntoDust());
     }
 
