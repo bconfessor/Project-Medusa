@@ -219,10 +219,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Start
+  m_text: START
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f7422985fd02e6468276d054e24ebb5, type: 2}
-  m_sharedMaterial: {fileID: 21684292911092192, guid: 4f7422985fd02e6468276d054e24ebb5,
+  m_fontAsset: {fileID: 11400000, guid: 39ad42f8136fc254c994a89a7202ccfa, type: 2}
+  m_sharedMaterial: {fileID: 21914102659826928, guid: 39ad42f8136fc254c994a89a7202ccfa,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

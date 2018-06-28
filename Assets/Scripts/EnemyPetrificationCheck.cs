@@ -5,8 +5,12 @@ using UnityEngine.EventSystems;
 
 public class EnemyPetrificationCheck : MonoBehaviour {
 
-
+    /// <summary>
+    /// Time it takes for medusa Gaze to kill enemy
+    /// </summary>
     public float gazeTime = 2f;
+
+
     float timer;
     bool enemyBeingGazed = false;
 

@@ -347,6 +347,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\minimapCamScript.cs" />
     <Compile Include="Assets\Prefabs\torch\scene\script\TorchSlider.cs" />
     <Compile Include="Assets\Prefabs\torch\scene\script\Torchslider2.cs" />
     <Compile Include="Assets\Prefabs\torch\scripts\Torchelight.cs" />
