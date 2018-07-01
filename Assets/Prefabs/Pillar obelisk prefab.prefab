@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e2902115dd3024683d218a8b5219e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnMinInterval: 6
-  spawnMaxInterval: 12
+  spawnMinInterval: 4
+  spawnMaxInterval: 9
   isSpawning: 1
   enemyToSpawn: {fileID: 1831237854643464, guid: c6a8ef97e85d5d24a935879ecc99d059,
     type: 2}
