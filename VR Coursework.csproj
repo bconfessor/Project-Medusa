@@ -359,6 +359,7 @@
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Typewriter.cs" />
     <Compile Include="Assets\Scripts\UIValuesTracker.cs" />
+    <Compile Include="Assets\standingStillScript.cs" />
     <Compile Include="Assets\TerminationTracker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

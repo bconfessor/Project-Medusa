@@ -23,8 +23,8 @@ public class TerminationTracker : MonoBehaviour {
     {
         gameIsOver = true;
         StageEndCanvasGO.SetActive(true);
-        StageEndText.GetComponent<TextMeshProUGUI>().text = "Game Over...";
-        StageEndDescriptionText.GetComponent<TextMeshProUGUI>().text = "You fought valliantly, but the enemies were stronger...";
+        StageEndText.GetComponent<TextMeshProUGUI>().text = "You died";
+        StageEndDescriptionText.GetComponent<TextMeshProUGUI>().text = "\nScore: " + UIValuesTracker.instance.enemiesKilled;
     }
 
 
@@ -35,9 +35,8 @@ public class TerminationTracker : MonoBehaviour {
     {
         gameIsOver = true;
         StageEndCanvasGO.SetActive(true);
-        StageEndText.GetComponent<TextMeshProUGUI>().text = "Success !";
-        StageEndDescriptionText.GetComponent<TextMeshProUGUI>().text = "You held back the barbarians and they ran away!" +
-                                                                       "\nHigh Score: "+ UIValuesTracker.instance.enemiesKilled;
+        StageEndText.GetComponent<TextMeshProUGUI>().text = "You survived !";
+        StageEndDescriptionText.GetComponent<TextMeshProUGUI>().text = "\nHigh Score: "+ UIValuesTracker.instance.enemiesKilled;
     }
 
 

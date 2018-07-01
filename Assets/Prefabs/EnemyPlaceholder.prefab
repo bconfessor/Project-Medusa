@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114184929605924920}
   - component: {fileID: 114940038920118876}
   - component: {fileID: 114000801042593064}
+  - component: {fileID: 82409411313941042}
   m_Layer: 8
   m_Name: EnemyPlaceholder
   m_TagString: Enemy
@@ -172,6 +173,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82409411313941042
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831237854643464}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 731598cb2bcc4334cb693a1b6559ae8c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000801042593064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,8 +325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265b70675815f6a48906c2f5b988c401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gazeTime: 2
-  timeToCrumbleIntoDust: 3
+  gazeTime: 1
+  enemyPetrificationSFX: {fileID: 8300000, guid: ccb6ac01654795a43b3aabb5af1fa2a3,
+    type: 3}
+  enemyCrumbleSFX: {fileID: 8300000, guid: 12a3d3a58d771ad409f9e1010b836d41, type: 3}
+  timeToCrumbleIntoDust: 5
 --- !u!114 &114940038920118876
 MonoBehaviour:
   m_ObjectHideFlags: 1

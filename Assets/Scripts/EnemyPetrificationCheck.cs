@@ -11,6 +11,16 @@ public class EnemyPetrificationCheck : MonoBehaviour {
     public float gazeTime = 2f;
 
 
+    AudioSource enemyAudioSource;
+
+    //Sound that plays when enemy gets petrified
+    public AudioClip enemyPetrificationSFX;
+    //audio that plays when enemy crumbles into dust(dissapears)
+    public AudioClip enemyCrumbleSFX;
+
+
+
+
     float timer;
     bool enemyBeingGazed = false;
 
@@ -37,8 +47,9 @@ public class EnemyPetrificationCheck : MonoBehaviour {
         Debug.Log("Enemy petrified");
         //Maybe change material so we know it's petrified?
 
+        enemyAudioSource.PlayOneShot(enemyPetrificationSFX);
 
-        //enemy was defeated, update Fallen Enemies Counter
+        //enemy was defeated, update Fallen Enemies Counter(put in if so it only plays once)
         if (!enemyIsDead)
         {
             UIValuesTracker.instance.AddFallenEnemy();
@@ -50,10 +61,24 @@ public class EnemyPetrificationCheck : MonoBehaviour {
     public IEnumerator CrumbleIntoDust()
     {
         //Some time after it's petrified, enemy will dissapear
-        yield return new WaitForSeconds(timeToCrumbleIntoDust);
+
+
+        //give time to play the petrification sound
+        yield return new WaitForSeconds(timeToCrumbleIntoDust / 3);
+        enemyAudioSource.Stop();
+
+        //play crumble sound
+        enemyAudioSource.PlayOneShot(enemyCrumbleSFX);
+        yield return new WaitForSeconds(2*timeToCrumbleIntoDust/3);
+
         Destroy(this.gameObject);
     }
 
+
+    void Awake()
+    {
+        enemyAudioSource = GetComponent<AudioSource>();
+    }
 
 
 
