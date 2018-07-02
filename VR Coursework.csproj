@@ -194,6 +194,9 @@
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -244,6 +247,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AllStarCharacterLibrary\Models\Particles\RayShot.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\AbilityClasses.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\ASCLBasicController.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\BasicHitCheck.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\CamTarget.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\CarCamera.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\CharacterControllerCollCheck.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\CharacterDemoController.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\CharacterPhysicsController.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\Enemy.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\Hit.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\killParticle.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\Missile.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\MouseOrbit.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\RadialAngler.cs" />
+    <Compile Include="Assets\AllStarCharacterLibrary\Scripts\RootMotionOff.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\HeadsetDemoManager.cs" />
@@ -347,7 +366,6 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-    <Compile Include="Assets\minimapCamScript.cs" />
     <Compile Include="Assets\Prefabs\torch\scene\script\TorchSlider.cs" />
     <Compile Include="Assets\Prefabs\torch\scene\script\Torchslider2.cs" />
     <Compile Include="Assets\Prefabs\torch\scripts\Torchelight.cs" />
@@ -355,12 +373,12 @@
     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyPetrificationCheck.cs" />
+    <Compile Include="Assets\Scripts\minimapCamScript.cs" />
     <Compile Include="Assets\Scripts\ObeliskSpawn.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\TerminationTracker.cs" />
     <Compile Include="Assets\Scripts\Typewriter.cs" />
     <Compile Include="Assets\Scripts\UIValuesTracker.cs" />
-    <Compile Include="Assets\standingStillScript.cs" />
-    <Compile Include="Assets\TerminationTracker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

@@ -8,6 +8,34 @@ public class EnemyAttack : MonoBehaviour {
     public float enemyDamage=1;//default
 
 
+    Animator anim;
+
+    /// <summary>
+    /// Returns true if any animation is being played by the animator
+    /// </summary>
+    /// <returns></returns>
+    bool AnimatorIsPlaying()
+    {
+        return anim.GetCurrentAnimatorStateInfo(0).length > anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
+
+    bool AnimatorisPlayingAnimation(string animName)
+    {
+        return AnimatorIsPlaying() && anim.GetCurrentAnimatorStateInfo(0).IsName(animName);
+    }
+
+
+    IEnumerator attackThenVanish()
+    {
+        anim.SetTrigger("isAttacking");
+
+        while(AnimatorisPlayingAnimation("Attack"))
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        //after this animation is done...
+        Destroy(this.gameObject);
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -20,15 +48,14 @@ public class EnemyAttack : MonoBehaviour {
             //update UI
             UIValuesTracker.instance.UpdateHP();
 
-            //for now, kill enemy as they attack the player
-            Destroy(this.gameObject);
+            StartCoroutine(attackThenVanish());
         }
     }
 
 
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame

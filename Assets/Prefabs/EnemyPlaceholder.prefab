@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33465176704199260}
   - component: {fileID: 135723382639158444}
   - component: {fileID: 23703536294343526}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: EnemyMinimapMarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,13 +45,13 @@ GameObject:
   - component: {fileID: 114940038920118876}
   - component: {fileID: 114000801042593064}
   - component: {fileID: 82409411313941042}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EnemyPlaceholder
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4072923097548454
 Transform:
   m_ObjectHideFlags: 1

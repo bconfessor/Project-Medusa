@@ -33,7 +33,7 @@ public class ObeliskSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        spawnPosition = transform.position+ new Vector3(0,3);
+        spawnPosition = transform.position;
         StartCoroutine(SpawnObjectAndWait());
 	}
 	

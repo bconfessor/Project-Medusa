@@ -10,7 +10,7 @@ public class EnemyPetrificationCheck : MonoBehaviour {
     /// </summary>
     public float gazeTime = 2f;
 
-
+    Animator anim;
     AudioSource enemyAudioSource;
 
     //Sound that plays when enemy gets petrified
@@ -54,6 +54,10 @@ public class EnemyPetrificationCheck : MonoBehaviour {
         {
             UIValuesTracker.instance.AddFallenEnemy();
             enemyIsDead = true;//to ensure it will only count once
+
+            //to petrify, simply freeze the animation
+            anim.enabled = false;
+            //anim.SetTrigger("isPetrified");
         }
         StartCoroutine(CrumbleIntoDust());
     }
@@ -78,6 +82,7 @@ public class EnemyPetrificationCheck : MonoBehaviour {
     void Awake()
     {
         enemyAudioSource = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
     }
 
 

@@ -112,6 +112,6 @@ MonoBehaviour:
   spawnMinInterval: 4
   spawnMaxInterval: 9
   isSpawning: 1
-  enemyToSpawn: {fileID: 1831237854643464, guid: c6a8ef97e85d5d24a935879ecc99d059,
+  enemyToSpawn: {fileID: 1812345763897142, guid: 6fdd49c3b9f9f6140ad394e18ac091d8,
     type: 2}
   spawnPosition: {x: 0, y: 0, z: 0}
