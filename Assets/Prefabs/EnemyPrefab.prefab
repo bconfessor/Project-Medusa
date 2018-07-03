@@ -3316,6 +3316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDamage: 10
+  isAttacking: 0
+  attackSFX: {fileID: 8300000, guid: 913bce04c20060740b05a47027664b69, type: 3}
 --- !u!114 &114599301052145622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3327,7 +3329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3277293165e6a94888076fe5086f292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 4
+  enemySpeed: 5
   isPetrified: 0
   playerGO: {fileID: 1723169145059248, guid: bada05e0b5209f14086d17cb291621fd, type: 2}
 --- !u!114 &114615266009431330
@@ -3345,6 +3347,7 @@ MonoBehaviour:
   enemyPetrificationSFX: {fileID: 8300000, guid: ccb6ac01654795a43b3aabb5af1fa2a3,
     type: 3}
   enemyCrumbleSFX: {fileID: 8300000, guid: 880b671be02780e4d96c7bd6ce657a15, type: 3}
+  stoneStormMeterIncrease: 0.1
   timeToCrumbleIntoDust: 5
 --- !u!136 &136067426503493020
 CapsuleCollider:

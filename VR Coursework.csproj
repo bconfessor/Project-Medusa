@@ -379,6 +379,7 @@
     <Compile Include="Assets\Scripts\TerminationTracker.cs" />
     <Compile Include="Assets\Scripts\Typewriter.cs" />
     <Compile Include="Assets\Scripts\UIValuesTracker.cs" />
+    <Compile Include="Assets\StoneStormScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

@@ -13,6 +13,8 @@ public class EnemyMovement : MonoBehaviour {
 
     Animator anim;
 
+    EnemyAttack enAt;
+
     void MoveTowardsPlayer()
     {
         float step = enemySpeed * Time.deltaTime;
@@ -26,6 +28,7 @@ public class EnemyMovement : MonoBehaviour {
     void Awake()
     {
         anim = GetComponent<Animator>();
+        enAt = GetComponent<EnemyAttack>();
     }
 
 	// Use this for initialization
@@ -33,12 +36,15 @@ public class EnemyMovement : MonoBehaviour {
         //this will stop enemy from floating towards player on top of rock
         playerPosition = playerGO.transform.position;
         playerPosition.y = transform.position.y;
-        anim.SetTrigger("hasSpawned");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(!isPetrified && !TerminationTracker.instance.gameIsOver)
+        if(!isPetrified && !TerminationTracker.instance.gameIsOver && !enAt.isAttacking)
            MoveTowardsPlayer();
+
+        //if game is over, all enemies must stop
+        if (TerminationTracker.instance.gameIsOver)
+            anim.SetBool("gameIsOver", true);
     }
 }

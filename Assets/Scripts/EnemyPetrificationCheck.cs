@@ -18,8 +18,10 @@ public class EnemyPetrificationCheck : MonoBehaviour {
     //audio that plays when enemy crumbles into dust(dissapears)
     public AudioClip enemyCrumbleSFX;
 
-
-
+    /// <summary>
+    /// How much the Stone Storm meter goes up upon defeating an enemy
+    /// </summary>
+    public float stoneStormMeterIncrease=0.1f;
 
     float timer;
     bool enemyBeingGazed = false;
@@ -54,6 +56,10 @@ public class EnemyPetrificationCheck : MonoBehaviour {
         {
             UIValuesTracker.instance.AddFallenEnemy();
             enemyIsDead = true;//to ensure it will only count once
+
+            //when enemy dies, fill up stone Storm meter
+            StoneStormScript.instance.IncreaseStoneStormMeter(stoneStormMeterIncrease);
+
 
             //to petrify, simply freeze the animation
             anim.enabled = false;
