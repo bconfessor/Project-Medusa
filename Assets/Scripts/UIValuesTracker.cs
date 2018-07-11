@@ -49,7 +49,7 @@ public class UIValuesTracker : MonoBehaviour {
                 break;//stop the countdown
 
             //each second, rewrite the counter countdown
-            CountdownText.text = "Time: " + (stageTimeLimit - timeElapsed);
+            CountdownText.text = (stageTimeLimit - timeElapsed).ToString();
             timeElapsed++;
             yield return new WaitForSeconds(1);
         }
